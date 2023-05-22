@@ -1,0 +1,14 @@
+{
+  "[shellscript]": {
+      "files.eol": "\n"
+  },
+  "files.eol": "\n",
+  "scm.repositories.visible": 0,
+  "files.exclude": {
+      "**/.classpath": true,
+      "**/.project": true,
+      "**/.settings": true,
+      "**/.factorypath": true
+  },
+  "editor.tabSize": 2
+}
