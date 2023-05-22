@@ -49,3 +49,6 @@ credentials.json
 clean
 temp.vars
 cft.json
+**/three-tier-architecture/build/ticblue_dev-uvlpic-backend/
+**/three-tier-architecture/build/ticblue_dev-uvlpic-chat/
+**/three-tier-architecture/build/ticblue_dev-uvlpic-frontend/
