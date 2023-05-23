@@ -1,0 +1,42 @@
+version: "3.4"
+services:
+  chat:
+    image: pasilvagh/ticblue_dev-uvlpic-frontend
+    container_name: frontend-container
+    build:
+      context: ticblue_dev-uvlpic-frontend
+      dockerfile: Dockerfile
+      target: production
+    ports:
+      - 5001:5001
+    restart: always
+
+  frontend:
+    image: pasilvagh/ticblue_dev-uvlpic-frontend
+    container_name: frontend-container
+    build:
+      context: ticblue_dev-uvlpic-frontend
+      dockerfile: Dockerfile
+      target: production
+    ports:
+      - 80:80
+    restart: always
+  
+  
+  backend:
+    image: pasilvagh/ticblue_dev-uvlpic-backend
+    container_name: backend-container
+    build:
+      context: ticblue_dev-uvlpic-backend
+      dockerfile: Dockerfile
+      target: production
+      args:
+        - REPO_IMAGE=pasilvagh/ticblue_dev-uvlpic-backend:latest
+    ports:
+      - 8090:8090
+    environment:
+      - API_PORT=8090
+
+    restart: always
+    depends_on:
+      - frontend
